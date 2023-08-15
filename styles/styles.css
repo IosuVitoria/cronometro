@@ -189,3 +189,13 @@ th {
 .print-button:hover {
   background-color: #555;
 }
+
+@media print {
+  body * {
+    display: none;
+  }
+
+  table {
+    display: table;
+  }
+}

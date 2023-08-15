@@ -7,7 +7,8 @@ const startButton = document.querySelector('.start');
 const stopButton = document.querySelector('.stop');
 const resetButton = document.querySelector('.reset');
 const lapsTableBody = document.querySelector('.laps tbody');
-const printButton = document.querySelector('.print-button');
+const printTableButton = document.getElementById('print-table-button');
+const tableToPrint = document.querySelector('table');
 
 // Variables accesorias que se crean para poder trabajar.
 let intervalId;
@@ -142,6 +143,40 @@ resetButton.addEventListener('click', () => {
   startButton.disabled = false;
   stopButton.disabled = true;
   resetButton.disabled = true;
+});
+
+//Función de impresión para permitir que la persona entrenada guarde los registros del día.
+
+printTableButton.addEventListener('click', () => {
+  let newWindow = window.open('', '_blank');
+  newWindow.document.open();
+  newWindow.document.write(`
+    <html>
+      <head>
+        <title>Tabla de Tiempos</title>
+        <style>
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+          }
+          th, td {
+            padding: 0.5rem;
+            border-bottom: 1px solid #ccc;
+          }
+          th {
+            background-color: #f3f3f3;
+            font-weight: bold;
+          }
+        </style>
+      </head>
+      <body>
+        ${tableToPrint.outerHTML}
+      </body>
+    </html>
+  `);
+  newWindow.document.close();
+  newWindow.print();
 });
 
 document.addEventListener('keydown', event => {
