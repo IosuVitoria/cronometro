@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Controlador de series Atletismo</title>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1>Controlador de Series de Atletismo</h1>
+    </div>
+  </header>
+
+  <section class="theory">
+    <div class="theory-content">
+      <h2>Las series en Atletismo</h2>
+      <p>En el atletismo, las series son una parte fundamental del entrenamiento, permitiendo mejorar la velocidad, resistencia y técnica.</p>
+      <br>
+      <p>Para los atletas que se enfocan en distancias que van desde los 1500 metros hasta la media maratón, las series pueden desempeñar un papel crucial en el desarrollo de la velocidad, resistencia y capacidad aeróbica. Aquí hay algunas recomendaciones generales para incorporar series en el entrenamiento:</p>
+      <br>
+      <ul>
+        <li><strong>Series de Velocidad:</strong> Incorpora series cortas y rápidas, como repeticiones de 400 metros o incluso 200 metros a un ritmo más rápido que tu ritmo de carrera objetivo.</li>
+        <li><strong>Series a Ritmo de Carrera:</strong> Realiza series a un ritmo similar al que deseas mantener en tu competencia objetivo.</li>
+        <li><strong>Series de Tempo:</strong> Las series de tempo implican correr a un ritmo constante y cómodo que es más rápido que tu ritmo de entrenamiento fácil.</li>
+        <li><strong>Recuperación Adecuada:</strong> La duración de las recuperaciones entre las repeticiones es esencial. Nada de correr 5 minutos a tope y luego descansar 20 segundos... Las recuperaciones deben como mínimo extenderse los suficiente para que nuestras pulsaciones bajen y recuperemos el ritmo respiratorio normal.</li>
+        <li><strong>Progresión:</strong> A medida que avanza tu plan de entrenamiento, considera aumentar gradualmente la distancia o el volumen de las series.</li>
+        <li><strong>Escucha a tu Cuerpo:</strong> Siempre presta atención a las señales de tu cuerpo. No sobrecargar el cuerpo ES VITAL.</li>
+        <li><strong>Variabilidad en el Terreno:</strong> Alterna entre correr en pista, senderos y carretera para darle variedad a tu entrenamiento.</li>
+        <li><strong>Calentamiento y Enfriamiento:</strong> Asegúrate de calentar adecuadamente antes de realizar las series y realizar un enfriamiento gradual después.</li>
+        <li><strong>Consulta a un Profesional:</strong> Si no estás formado en una disciplina deportiva o eres nuevo corriendo, considera consultar con un entrenador experimentado para diseñar un plan de entrenamiento personalizado. Cada cuerpo requiere su propio plan.</li>
+      </ul>
+    </div>
+    <div class="theory-images">
+      <img src="./assets/atlet1.jpg" alt="Atleta corriendo">
+    </div>
+  </section>
+  
+  <section class="time_controller">
+    <div class="time-controller-content">
+      <section class="instructions">
+        <div class="instructions-content">
+          <h2>Instrucciones</h2>
+          <p>Presiona "Start" para comenzar a registrar los tiempos de tus series. Presiona "Stop" para detener y registrar el tiempo actual. Presiona "Reset" para reiniciar todo. La primera serie no es registrada ya que es considerada como registro de tiempo de calentamiento por parte del corredor/corredora.</p>
+        </div>
+      </section>
+
+      <div class="distance-select">
+        <p>Elige la distancia de la serie que estás realizando.</p>
+        <label for="distance">Distancia de las Series:</label>
+        <select id="distance" name="distance">
+          <option value="200">200 metros</option>
+          <option value="400">400 metros</option>
+          <option value="800" selected>800 metros</option>
+          <option value="1000">1000 metros</option>
+          <option value="2000">2000 metros</option>
+        </select>
+      </div>
+
+      <div class="wrapper">
+        <div class="time">
+          <span class="hour">00</span>
+          <span class="colon">:</span>
+          <span class="minute">00</span>
+          <span class="colon">:</span>
+          <span class="second">00</span>
+          <span class="colon">:</span>
+          <span class="millisecond">000</span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="start"><i class="fas fa-play"></i> Start</button>
+        <button class="stop"><i class="fas fa-stop"></i> Stop</button>
+        <button class="reset"><i class="fas fa-redo-alt"></i> Reset</button>
+      </div>
+
+      <div class="laps">
+        <p>La tabla se divide en cuatro columnas: nº de registro/vuelta, tiempo del registro, diferencia de tiempo y velocidad de la serie.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Vuelta</th>
+              <th>Tiempo</th>
+              <th>Diferencia de tiempo</th>
+              <th>Velocidad (km/h)</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <button class="print-button"><i class="fas fa-print"></i> Imprimir</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

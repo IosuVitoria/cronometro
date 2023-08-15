@@ -1,0 +1,1 @@
+Tomando de base lo anterior, mejora el cronómetro para que te haga una lista con los tiempos que vas registrando según le das a stop. Da un estilo moderno y de tipo atletismo al cronómetro.
